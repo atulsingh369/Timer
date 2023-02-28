@@ -63,9 +63,6 @@ const tym = () => {             // For calculatong no of seconds
 	let seconds = (24 * 60 * 60) - (now.getSeconds() + now.getMinutes() * 60 + now.getHours() * 60 * 60);
 	let days = calc();
 
-	// diffTime[0] = Math.floor(days / 365);
-	// diffTime[1] = Math.floor(days % 365 / 30);
-	// diffTime[2] = Math.floor(days % 365 % 30);
 	diffTime[0] = Math.floor(days * 0.0027379);
 	diffTime[1] = Math.floor([(days * 0.0027379) - diffTime[0]] * 12);
 	diffTime[2] = Math.floor([([(days * 0.0027379) - diffTime[0]] * 12) - diffTime[1]] * 30);
@@ -87,7 +84,8 @@ const input = () => {          // Input the Date
 	let arr = prompt("Enter Date in \"DD/MM/YYYY\" format").split("/");
 	if (/^[a-zA-Z()]+$/.test(arr[0])) {
 		alert("Invalid Date Format");
-		return
+		inpDate = [0, 0, 0];
+		return;
 	}
 
 	inpDate = arr.map(function (str) {
@@ -95,15 +93,18 @@ const input = () => {          // Input the Date
 	});
 	if (inpDate[0] > 31 || inpDate[1] > 12 || inpDate[0] <= 0 || inpDate[1] <= 0) {
 		alert("Invalid Date Format");
-		return
+		inpDate = [0, 0, 0];
+		return;
 	}
 	if ((inpDate[0] == now.getDate() && inpDate[1] == (now.getMonth() + 1) && inpDate[2] == now.getFullYear()) || (inpDate[2] == now.getFullYear() && inpDate[1] < (now.getMonth() + 1)) || (inpDate[2] == now.getFullYear() && inpDate[1] == (now.getMonth() + 1) && inpDate[0] < now.getDate())) {
 		alert("Enter Future Date");
-		return
+		inpDate = [0, 0, 0];
+		return;
 	}
 	else if (inpDate[2] < now.getFullYear()) {
 		alert("Enter Future Date");
-		return
+		inpDate = [0, 0, 0];
+		return;
 	}
 	window.setInterval(function () { disp() }, 1000);
 }
