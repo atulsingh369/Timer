@@ -84,7 +84,7 @@ const input = () => {          // Input the Date
 	let arr = prompt("Enter Date in \"DD/MM/YYYY\" format").split("/");
 	if (/^[a-zA-Z()]+$/.test(arr[0])) {
 		alert("Invalid Date Format");
-		inpDate = [0, 0, 0];
+		diffTime = [0, 0, 0, 0, 0, 0];
 		return;
 	}
 
@@ -93,17 +93,17 @@ const input = () => {          // Input the Date
 	});
 	if (inpDate[0] > 31 || inpDate[1] > 12 || inpDate[0] <= 0 || inpDate[1] <= 0) {
 		alert("Invalid Date Format");
-		inpDate = [0, 0, 0];
+		diffTime = [0, 0, 0, 0, 0, 0];
 		return;
 	}
 	if ((inpDate[0] == now.getDate() && inpDate[1] == (now.getMonth() + 1) && inpDate[2] == now.getFullYear()) || (inpDate[2] == now.getFullYear() && inpDate[1] < (now.getMonth() + 1)) || (inpDate[2] == now.getFullYear() && inpDate[1] == (now.getMonth() + 1) && inpDate[0] < now.getDate())) {
 		alert("Enter Future Date");
-		inpDate = [0, 0, 0];
+		diffTime = [0, 0, 0, 0, 0, 0];
 		return;
 	}
 	else if (inpDate[2] < now.getFullYear()) {
 		alert("Enter Future Date");
-		inpDate = [0, 0, 0];
+		diffTime = [0, 0, 0, 0, 0, 0];
 		return;
 	}
 	window.setInterval(function () { disp() }, 1000);
