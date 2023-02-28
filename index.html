@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://i.ibb.co/HpKL2Gc/android-chrome-512x512.png"
+      type="image/x-icon" />
+    <title>Timer</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Remaining Time</h1>
+      <div class="time">
+        <div class="row">
+          <p style="display: flex; flex-direction: column">
+            <span id="year" style="display: flex; justify-content: center"
+              >0</span
+            >
+            <span style="font-size: 50%; display: flex; justify-content: center"
+              >YEARS</span
+            >
+          </p>
+          <p style="display: flex; flex-direction: column">
+            <span id="month" style="display: flex; justify-content: center"
+              >0</span
+            >
+            <span style="font-size: 50%; display: flex; justify-content: center"
+              >MONTHS</span
+            >
+          </p>
+          <p style="display: flex; flex-direction: column">
+            <span id="day" style="display: flex; justify-content: center"
+              >0</span
+            >
+            <span style="font-size: 50%; display: flex; justify-content: center"
+              >DAYS</span
+            >
+          </p>
+        </div>
+        <div class="row">
+          <p style="display: flex; flex-direction: column">
+            <span id="hrs" style="display: flex; justify-content: center"
+              >0</span
+            >
+            <span style="font-size: 50%; display: flex; justify-content: center"
+              >HOURS</span
+            >
+          </p>
+          <p style="display: flex; flex-direction: column">
+            <span id="min" style="display: flex; justify-content: center"
+              >0</span
+            >
+            <span style="font-size: 50%; display: flex; justify-content: center"
+              >MINUTES</span
+            >
+          </p>
+          <p style="display: flex; flex-direction: column">
+            <span id="sec" style="display: flex; justify-content: center"
+              >0</span
+            >
+            <span style="font-size: 50%; display: flex; justify-content: center"
+              >SECONDS</span
+            >
+          </p>
+        </div>
+      </div>
+      <button onclick="input()" class="input">Enter Date</button>
+      <div style="position: fixed; bottom: 10px">
+        <h1
+          style="
+            font-size: 200%;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            text-align: center;
+            font-weight: 600;
+          ">
+          Made with 💗 by Atul
+        </h1>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
