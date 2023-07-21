@@ -1,4 +1,4 @@
-# Timer
+# Time Minder
 
 A JS-based Algo for finding difference of years, months, days, hours, minutes and secons between a date and of now.
 
